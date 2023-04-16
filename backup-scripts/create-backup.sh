@@ -13,7 +13,6 @@ sudo echo "Resetting nix..."
 sudo rm -rf /nix/*
 sudo mkdir -p /nix
 sudo cp -R /opt/nb/nix/* /nix/
-sudo restorecon -RF /nix
 sudo echo "Nix has been resetted. Reboot for changes to apply."
 EOF
 
