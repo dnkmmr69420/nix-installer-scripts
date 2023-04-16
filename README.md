@@ -34,3 +34,9 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/uninstaller-scripts/silverblue-nix-uninstaller.sh)
 ```
+
+## Other useful docs
+
+[Extra Scripts](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/extra-scripts.md)
+
+[Nix with selinux manual install guide](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/selinux-nix-manual-install-guide.md)
