@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo echo "Uninstalling nix"
+sudo echo "Uninstalling nix..."
 sudo systemctl stop nix-daemon.service
 sudo systemctl disable nix-daemon.socket nix-daemon.service
 sudo systemctl daemon-reload
