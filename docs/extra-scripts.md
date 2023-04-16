@@ -27,7 +27,7 @@ It makes `/etc/profile.d/nix-app-icons.sh` which contains `XDG_DATA_DIRS="$HOME/
 #### Multiuser
 
 ```bash
-sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installers/main/nix-app-icons.sh
+sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix-app-icons.sh
 ```
 
 #### Singleuser
