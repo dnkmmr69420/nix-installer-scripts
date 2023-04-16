@@ -89,7 +89,7 @@ sleep 1
 
 echo "Making a nix backup"
 
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-with-selinux/main/create-backup.sh)
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
 
 sleep 1
 
