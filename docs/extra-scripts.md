@@ -4,7 +4,7 @@ My scripts already run these commands automaticly but if you use a different ins
 
 ## Commands
 
-### add `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`
+### add `experimental-features = nix-command flakes` to `/etc/nix/nix.conf`or `~/.config/nix/nix.conf`
 
 #### Multiuser
 
