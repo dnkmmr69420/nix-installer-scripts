@@ -42,3 +42,9 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 [Nix with selinux manual install guide](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/selinux-nix-manual-install-guide.md)
 
 [Old github repos that this repo has replaced list](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/my-old-nix-github-repos.md)
+
+## Some useful nix tools
+
+Fleek: [Github page](https://github.com/ublue-os/fleek) [Website](https://getfleek.dev/)
+
+Nix Portable: [Main Page](https://github.com/DavHau/nix-portable) [My nix portable utilities](https://github.com/dnkmmr69420/nix-portable-utils)
