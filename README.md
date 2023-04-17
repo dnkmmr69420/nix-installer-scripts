@@ -45,6 +45,6 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 
 ## Some useful nix tools
 
-Fleek: [Github page](https://github.com/ublue-os/fleek) [Website](https://getfleek.dev/)
+Fleek: [Github-page](https://github.com/ublue-os/fleek) [Website](https://getfleek.dev/)
 
-Nix Portable: [Main Page](https://github.com/DavHau/nix-portable) [My nix portable utilities](https://github.com/dnkmmr69420/nix-portable-utils)
+Nix Portable: [Main-Page](https://github.com/DavHau/nix-portable) [My-nix-portable-tilities](https://github.com/dnkmmr69420/nix-portable-utils)
