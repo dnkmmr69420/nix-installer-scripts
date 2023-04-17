@@ -19,7 +19,7 @@ sudo tee /etc/systemd/system/nix-daemon.service.d/override.conf <<EOF
 Environment="NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt"
 EOF
 
-echo "Preparring the nix install script"
+echo "Preparing the nix install script"
 
 sleep 5
 
