@@ -1,6 +1,8 @@
 # nix-installer-scripts
 Various scripts to install the nix package manager
 
+This may break if something other than bash is not the default login shell so have bash be the default shell. It will be better to make a profile on your terminal application and have a different shell instance that way.
+
 ## Installers
 
 ### Regular installer for non-selinux systems
