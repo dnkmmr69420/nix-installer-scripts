@@ -36,4 +36,4 @@ sudo ln -s /nix/var/nix/profiles/default/bin/nix-prefetch-url /usr/local/bin
 sudo ln -s /nix/var/nix/profiles/default/bin/nix-shell /usr/local/bin
 sudo ln -s /nix/var/nix/profiles/default/bin/nix-store /usr/local/bin
 
-sudo echo "Finnished linking"
+sudo echo "Finished linking"
