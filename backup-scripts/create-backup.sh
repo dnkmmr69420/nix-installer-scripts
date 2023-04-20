@@ -18,4 +18,4 @@ EOF
 
 sudo chmod a+x /opt/nb/reset-nix
 
-sudo echo "Finnished installing nix backup"
+sudo echo "Finished installing nix backup"
