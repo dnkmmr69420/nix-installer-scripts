@@ -2,20 +2,28 @@
 
 With this, you can install and run the nix package manager inside of distrobox with ease
 
-## Installers
+## Installation instructions
 
-### Script for setting up a container and installing
+### Create distrobox container
 
-This script sets up a distrobox container then installs nix inside of it.
+Lets use arch linux as the container distro but others may work but have not been tested
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/nix-distrobox-setup.sh)
+distrobox create -i archlinux:latest -n nix-container
 ```
 
-### Script for preexisting container
+### Enter distrobox
 
-This script is good if you want to set up the container yourself and choose what container you want to use. Run this inside of distrobox.
+Lets enter the distrobox container
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/nix-preexisting-container.sh)
+distrobox enter nix-container
+```
+
+### Install nix
+
+Run this script to install nix. Make sure you are in the container.
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/nix-distrobox-installer.sh)
 ```
