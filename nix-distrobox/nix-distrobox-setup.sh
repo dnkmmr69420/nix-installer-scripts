@@ -8,7 +8,7 @@ if type -p distrobox > /dev/null; then
 	echo "Creating $distrobox_name ..."
 	distrobox create -i archlinux:latest -n $distrobox_name
 	echo "Preparing nix install script"
-	sleep 10
+	sleep 30
 	distrobox enter $distrobox_name -- echo "Installing nix in distrobox..."
 	distrobox enter $distrobox_name -- sh <(curl -L https://nixos.org/nix/install) --no-daemon
 	sleep 3
