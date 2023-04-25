@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+echo "What would you like to name the distrobox?"
+read distrobox_name
+echo "Creating $distrobox_name"
+distrobox create -i archlinux:latest -n $distrobox_name
+distrobox enter $distrobox_name -- sh <(curl -L https://nixos.org/nix/install) --no-daemon
+distrobox enter $distrobox_name -- sudo rm /etc/nix/nix.conf
+distrobox enter $distrobox_name -- sudo wget -P /etc/nix
