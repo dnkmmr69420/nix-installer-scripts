@@ -16,15 +16,4 @@ sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https:/
 echo "exporting nix binaries"
 sleep 1
 
-mkdir -p ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix --export-path  ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-build --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-channel --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-collect-garbage --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-copy-closure --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-env --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-hash --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-instantiate --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-prefetch-url --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-shell --export-path ~/.local/bin
-distrobox-export --bin ~/.nix-profile/bin/nix-store --export-path ~/.local/bin
+
