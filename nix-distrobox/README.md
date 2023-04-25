@@ -17,5 +17,5 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 This script is good if you want to set up the container yourself and choose what container you want to use. Run this inside of distrobox.
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/inside-nix-distrobox.sh)
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/nix-preexisting-container.sh)
 ```
