@@ -2,6 +2,8 @@
 
 With this, you can install and run the nix package manager inside of distrobox with ease
 
+This won't work if nix is installed on the host system
+
 ## Installation instructions
 
 ### Create distrobox container
