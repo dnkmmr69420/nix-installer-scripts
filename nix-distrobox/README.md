@@ -8,10 +8,10 @@ This won't work if nix is installed on the host system
 
 ### Create distrobox container
 
-Lets use arch linux as the container distro but others may work but have not been tested
+Lets use alpine linux as the container distro but others may work but have not been tested
 
 ```bash
-distrobox create -i archlinux:latest -n nix-container
+distrobox create -i alpine:latest -n nix-container
 ```
 
 ### Enter distrobox
