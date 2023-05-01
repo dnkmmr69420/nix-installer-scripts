@@ -20,7 +20,9 @@ sleep 1
 sudo rm -f /etc/nix/nix.conf ; sudo wget -P /etc/nix https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/nix.conf
 sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix-app-icons.sh
 
-echo "exporting nix binaries"
-sleep 1
+echo "Performing last steps"
+
+sudo rm -f /etc/os-release
+sudo ln -s /run/host/etc/os-release /etc/os-release
 
 
