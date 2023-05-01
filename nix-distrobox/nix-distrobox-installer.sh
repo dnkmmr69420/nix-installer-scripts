@@ -22,6 +22,7 @@ sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https:/
 
 echo "Performing last steps"
 
+sleep 1
 sudo rm -f /etc/os-release
 sudo ln -s /run/host/etc/os-release /etc/os-release
 
