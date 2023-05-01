@@ -2,6 +2,13 @@
 
 # This should only be ran in a distrobox container
 
+echo "Installing xz."
+echo "If you get an error message about the command not existing and you are not running an alpine linux container, just ignore the error."
+
+sleep 1
+
+sudo apk add xz
+
 echo "Preparing nix installation script..."
 
 sleep 5
