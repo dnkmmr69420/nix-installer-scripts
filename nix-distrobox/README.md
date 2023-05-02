@@ -14,6 +14,12 @@ Lets use alpine linux as the container distro but others may work but have not b
 distrobox create -i alpine:latest -n nix-container
 ```
 
+Use this if nix is installed on the host system or you are using NixOS
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/distrobox-no-mount-nix.sh) ; https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/create-distrobox-no-nix-mount.sh ; rm -rf ~/nix-distrobox
+```
+
 ### Enter distrobox
 
 Lets enter the distrobox container
