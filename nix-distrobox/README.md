@@ -17,7 +17,11 @@ distrobox create -i alpine:latest -n nix-container
 Use this if nix is installed on the host system or you are using NixOS
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/distrobox-no-mount-nix.sh) ; bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/create-distrobox-no-nix-mount.sh) ; rm -rf ~/nix-distrobox
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/distrobox-no-mount-nix.sh)
+```
+
+```bash
+cd ~/nix-distrobox/bin ; ./distrobox-create -i alpine:latest -n nix-container
 ```
 
 ### Enter distrobox
