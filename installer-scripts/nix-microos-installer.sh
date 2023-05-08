@@ -27,7 +27,7 @@ sleep 5
 
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
-sudo echo "Nix installer has Finished running"
+echo "Nix installer has Finished running"
 sleep 1
 echo "Now copying service files"
 
