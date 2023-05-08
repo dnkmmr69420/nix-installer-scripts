@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo sleep 1
 
 echo "Adding selinux content to /nix"
 
@@ -26,7 +27,7 @@ sleep 5
 
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
-echo "Nix installer has Finished running"
+sudo echo "Nix installer has Finished running"
 sleep 1
 echo "Now copying service files"
 
