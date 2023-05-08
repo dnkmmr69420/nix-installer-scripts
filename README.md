@@ -23,6 +23,22 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/silverblue-nix-installer.sh)
 ```
 
+### Installer for opensuse microos
+
+first run this
+
+```bash
+sudo transactional-update run 'mksubvolume /nix'
+```
+
+Reboot
+
+Then run the script
+
+```bash
+no script yet
+```
+
 ### [Nix inside distrobox installer and setup](https://github.com/dnkmmr69420/nix-installer-scripts/tree/main/nix-distrobox)
 
 ## Uninstallers
