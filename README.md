@@ -28,7 +28,7 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 first run this
 
 ```bash
-sudo transactional-update run 'mksubvolume /nix'
+sudo transactional-update run mksubvolume /nix
 ```
 
 Reboot
