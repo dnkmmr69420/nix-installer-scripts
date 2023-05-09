@@ -95,6 +95,10 @@ sleep 1
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-linker.sh)
 
+sleep 1
+
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-sudo-path.sh)
+
 echo "Modifying configurations"
 
 sleep 1
