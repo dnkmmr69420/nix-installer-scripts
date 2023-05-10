@@ -27,3 +27,42 @@ EOF
 
 sleep 1
 
+sudo tee /etc/systemd/system/nix.mount <<EOF
+[Unit]
+Description=Mount `/home/nix` on `/nix`
+PropagatesStopTo=nix-daemon.service
+PropagatesStopTo=nix-directory.service
+After=nix-directory.service
+Requires=nix-directory.service
+ConditionPathIsDirectory=/nix
+DefaultDependencies=no
+RequiredBy=nix-daemon.service
+RequiredBy=nix-daemon.socket
+
+[Mount]
+What=/home/nix
+Where=/nix
+Type=none
+DirectoryMode=0755
+Options=bind
+EOF
+
+sleep 1
+
+sudo tee /etc/systemd/system/ensure-symlinked-units-resolve.service <<EOF
+[Unit]
+Description=Ensure Nix related units which are symlinked resolve
+After=nix.mount
+Requires=nix-directory.service
+Requires=nix.mount
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/systemctl daemon-reload
+ExecStart=/usr/bin/systemctl restart --no-block nix-daemon.socket
+
+[Install]
+WantedBy=sysinit.target
+EOF
