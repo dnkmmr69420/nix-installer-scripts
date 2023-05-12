@@ -24,6 +24,10 @@ EOF
 
 sudo ln -s /etc/sv/nix-daemon /var/service/
 
+sudo tee /etc/profile.d/nix-daemon.sh <<EOF
+export NIX_REMOTE=daemon
+EOF
+
 "Setting up configs..."
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup.sh)
