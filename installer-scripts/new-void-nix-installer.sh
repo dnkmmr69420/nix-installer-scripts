@@ -28,6 +28,8 @@ sudo tee /etc/profile.d/nix-daemon.sh <<EOF
 export NIX_REMOTE=daemon
 EOF
 
+sudo rm -f /etc/profile.d/nix.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/nix/files/nix.sh
+
 "Setting up configs..."
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup.sh)
