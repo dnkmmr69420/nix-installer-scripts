@@ -80,8 +80,26 @@ sleep 5
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
 echo "Creating a backup of nix"
-sleep 1
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup.sh)
+
+sleep 3
+
+echo "Installing nix backup"
+
+sudo mkdir /home/nb
+sudo cp -R /nix /home/nb
+
+sudo tee /home/nb/reset-nix <<EOF
+#!/bin/bash
+sudo echo "Resetting nix..."
+sudo rm -rf /nix/*
+sudo mkdir -p /nix
+sudo cp -R /home/nb/nix/* /nix/
+sudo echo "Nix has been resetted. Reboot for changes to apply."
+EOF
+
+sudo chmod a+x /home/nb/reset-nix
+
+sudo echo "Finished installing nix backup"
 
 sleep 1
 
