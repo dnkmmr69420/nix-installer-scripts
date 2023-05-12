@@ -1,7 +1,7 @@
 # nix-installer-scripts
 Various scripts to install the nix package manager
 
-This may break if something other than bash is not the default login shell so have bash be the default shell. It will be better to make a profile on your terminal application and have a different shell instance that way.
+This may break if something other than bash is not the default login shell so have bash be the default shell. It will be better to make a profile on your terminal application and have a different shell instance that way. If the commands itself give some sort of error, use bash as a shell. Type `bash` into the terminal to get to bash.
 
 ## Installers
 
@@ -37,6 +37,25 @@ Then run the script
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/nix-microos-installer.sh)
+```
+
+## Void linux installer
+
+First check if curl is installed
+
+```bash
+sudo xbps-install -S curl
+```
+use the bash shell
+
+```bash
+bash
+```
+
+Install nix
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/nix-void-linux-installer.sh)
 ```
 
 ### [Nix inside distrobox installer and setup](https://github.com/dnkmmr69420/nix-installer-scripts/tree/main/nix-distrobox)
