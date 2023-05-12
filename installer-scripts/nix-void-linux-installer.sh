@@ -4,11 +4,7 @@ echo "Preparing to install nix..."
 
 sleep 5
 
-sudo xbps-install -Sy wget boost-devel brotli-devel bzip2-devel gc-devel libcurl-devel
- liblzma-devel openssl-devel libsodium-devel sqlite-devel
- libseccomp-devel editline-devel jq-devel libarchive-devel
- gtest-devel lowdown-devel json-c++ curl pkg-config flex tar xz automake autoconf-archive mdBook jq
- busybox-static lowdown
+sudo xbps-install -Sy wget
 sudo xbps-install -Sy nix
 
 echo "linking services"
