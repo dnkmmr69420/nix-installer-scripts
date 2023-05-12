@@ -23,6 +23,6 @@ sudo touch /etc/nix-setup-check-file
 
 else
 
-exit 0
+exec $SHELL
 
 fi
