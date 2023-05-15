@@ -39,7 +39,7 @@ Then run the script
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/nix-microos-installer.sh)
 ```
 
-## Void linux installer
+### Void linux installer
 
 First check if curl is installed
 
