@@ -25,7 +25,7 @@ echo "Preparing the nix install script"
 
 sleep 5
 
-sh <(curl -L https://nixos.org/nix/install) --daemon
+sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 
 echo "Nix installer has Finished running"
 sleep 1
