@@ -16,8 +16,4 @@ nix develop .#native-clang11StdenvPackages
 
 sleep 1
 
-nix-shell --command "./bootstrap.sh"
-nix-shell --command "./configure $configureFlags --prefix=$PREFIX_DIR"
-nix-shell --command "make -j $NIX_BUILD_CORES"
-nix-shell --command "make install"
-nix-shell --command "make installcheck -j $NIX_BUILD_CORES"
+nix-shell --command "cd /opt/nix-git/nix ; /opt/nix-git/nix/bootstrap.sh ; /opt/nix-git/nix/configure $configureFlags --prefix=$PREFIX_DIR ; make -j $NIX_BUILD_CORES ; make install ; make installcheck -j $NIX_BUILD_CORES"
