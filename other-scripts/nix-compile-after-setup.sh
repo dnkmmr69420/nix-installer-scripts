@@ -36,7 +36,11 @@ sudo rm -f /etc/systemd/system/nix-daemon.socket
 sudo cp /opt/nixusr/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
 sudo cp /opt/nixusr/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix-daemon.socket
 
-sudo echo "linking configurations..."
+sudo echo "Configuring nix..."
 sudo ln -s /etc/nix /opt/nixusr/etc/nix
+sudo tee /etc/profile.d/nix.sh <<EOF
+if [ -e '/opt/nixusr/etc/profile.d/nix-daemon.sh' ]; then
+  . '/opt/nixusr/etc/profile.d/nix-daemon.sh'
+fi
+EOF
 
-sudo echo "Copying configurations..."
