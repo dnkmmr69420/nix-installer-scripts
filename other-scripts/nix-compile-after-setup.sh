@@ -38,3 +38,5 @@ sudo cp /opt/nixusr/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix
 
 sudo echo "linking configurations..."
 sudo ln -s /etc/nix /opt/nixusr/etc/nix
+
+sudo echo "Copying configurations..."
