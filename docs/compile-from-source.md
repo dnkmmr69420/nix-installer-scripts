@@ -32,6 +32,12 @@ $ nix develop
 nix develop .#native-clang11StdenvPackages
 ```
 
+### type this
+
+```bash
+sudo mkdir -p /opt/nixusr
+```
+
 ### enter nix shell
 
 ```bash
@@ -42,7 +48,7 @@ nix-shell
 
 ```console
 ./bootstrap.sh
-./configure $configureFlags --prefix=/usr/local
+./configure $configureFlags --prefix=/opt/nixusr
 make -j $NIX_BUILD_CORES
 make install
 make installcheck -j $NIX_BUILD_CORES
