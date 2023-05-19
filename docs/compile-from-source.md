@@ -23,7 +23,7 @@ cd nix
 ### type this
 
 ```console
-$ nix develop
+nix develop
 ```
 
 ### type this
@@ -35,7 +35,7 @@ nix develop .#native-clang11StdenvPackages
 ### type this
 
 ```bash
-sudo mkdir -p /opt/nixusr
+mkdir -p /opt/nixusr
 ```
 
 ### enter nix shell
