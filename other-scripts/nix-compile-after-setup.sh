@@ -19,7 +19,7 @@ sudo ln -s /opt/nixusr/bin/nix-instantiate $PREFIX/bin
 sudo ln -s /opt/nixusr/bin/nix-prefetch-url $PREFIX/bin
 sudo ln -s /opt/nixusr/bin/nix-store $PREFIX/bin
 
-echo "
+echo "deleting and copying services..."
 sudo rm -f /etc/systemd/system/nix-daemon.service
 sudo rm -f /etc/systemd/system/nix-daemon.socket
 sudo cp /opt/nixusr/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
