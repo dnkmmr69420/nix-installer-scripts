@@ -44,3 +44,7 @@ if [ -e '/opt/nixusr/etc/profile.d/nix-daemon.sh' ]; then
 fi
 EOF
 
+sudo echo "Configuring selinux..."
+sleep 3
+sudo echo "If you don't have selinux installed and you get errors about the command not being found, Ignore them"
+sudo semanage fcontext -a -t etc_t '/opt/nixusr/etc(/.*)?' ; sudo semanage fcontext -a -t lib_t '/opt/nixusr/lib(/.*)?' ; sudo semanage fcontext -a -t systemd_unit_file_t '/opt/nixusr/lib/systemd/system(/.*)?' ; sudo semanage fcontext -a -t man_t '/opt/nixusr/man(/.*)?' ; sudo semanage fcontext -a -t bin_t '/opt/nixusr/s?bin(/.*)?' ; sudo semanage fcontext -a -t usr_t '/opt/nixusr/share(/.*)?'
