@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Type in password to continue"
+sudo echo "Continuing..."
+
 PREFIX=$1
 
 echo "Linking nix"
@@ -15,3 +18,9 @@ sudo ln -s /opt/nixusr/bin/nix-hash $PREFIX/bin
 sudo ln -s /opt/nixusr/bin/nix-instantiate $PREFIX/bin
 sudo ln -s /opt/nixusr/bin/nix-prefetch-url $PREFIX/bin
 sudo ln -s /opt/nixusr/bin/nix-store $PREFIX/bin
+
+echo "
+sudo rm -f /etc/systemd/system/nix-daemon.service
+sudo rm -f /etc/systemd/system/nix-daemon.socket
+sudo cp /opt/nixusr/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
+sudo cp /opt/nixusr/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix-daemon.socket
