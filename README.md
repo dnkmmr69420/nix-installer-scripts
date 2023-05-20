@@ -65,13 +65,13 @@ curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main
 ### Regular uninstaller for both non-selinux and selinux muttable systems
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/uninstaller-scripts/regular-uninstaller.sh)
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/uninstaller-scripts/regular-uninstaller.sh | bash
 ```
 
 ### Silverblue nix uninstaller
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/uninstaller-scripts/silverblue-nix-uninstaller.sh)
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/uninstaller-scripts/silverblue-nix-uninstaller.sh | bash
 ```
 
 ## Other useful docs
