@@ -65,3 +65,11 @@ nix --version
 ```bash
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-compile-after-setup.sh | bash -s /usr/local
 ```
+
+## Archive it
+
+### Making an archive to contribute
+
+```bash
+tar -czf nixusr.tar.gz /opt/nixusr
+```
