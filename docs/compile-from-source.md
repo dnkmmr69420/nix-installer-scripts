@@ -1,5 +1,13 @@
 This is the modified version of this [page](https://nixos.org/manual/nix/unstable/contributing/hacking.html)
 
+# Install from the archive (x86_64 only)
+
+```bash
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/tar-extracters/compiled-nix-x86_64-tar-extract.sh | bash
+```
+
+# Compile
+
 enter bash as root
 
 ```bash
@@ -60,11 +68,7 @@ make installcheck -j $NIX_BUILD_CORES
 nix --version
 ```
 
-### Install from the archive (x86_64 only)
-
-```bash
-curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/tar-extracters/compiled-nix-x86_64-tar-extract.sh | bash
-```
+# After the setup
 
 ### Run the after setup
 
