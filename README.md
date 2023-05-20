@@ -82,6 +82,8 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 
 [Old github repos that this repo has replaced list](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/my-old-nix-github-repos.md)
 
+[Compile from source](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/compile-from-source.md)
+
 ## Some useful nix tools
 
 Fleek: [Github-page](https://github.com/ublue-os/fleek) [Website](https://getfleek.dev/)
