@@ -50,3 +50,7 @@ sudo echo "If you don't have selinux installed and you get errors about the comm
 sudo semanage fcontext -a -t etc_t '/opt/nixusr/etc(/.*)?' ; sudo semanage fcontext -a -t lib_t '/opt/nixusr/lib(/.*)?' ; sudo semanage fcontext -a -t systemd_unit_file_t '/opt/nixusr/lib/systemd/system(/.*)?' ; sudo semanage fcontext -a -t man_t '/opt/nixusr/man(/.*)?' ; sudo semanage fcontext -a -t bin_t '/opt/nixusr/s?bin(/.*)?' ; sudo semanage fcontext -a -t usr_t '/opt/nixusr/share(/.*)?'
 sudo semanage fcontext -a -t etc_t '/var/opt/nixusr/etc(/.*)?' ; sudo semanage fcontext -a -t lib_t '/var/opt/nixusr/lib(/.*)?' ; sudo semanage fcontext -a -t systemd_unit_file_t '/var/opt/nixusr/lib/systemd/system(/.*)?' ; sudo semanage fcontext -a -t man_t '/var/opt/nixusr/man(/.*)?' ; sudo semanage fcontext -a -t bin_t '/var/opt/nixusr/s?bin(/.*)?' ; sudo semanage fcontext -a -t usr_t '/var/opt/nixusr/share(/.*)?'
 sudo restorecon -RF /opt/nixusr
+
+sudo echo "Enabling services..."
+sudo systemctl enable --now nix-daemon.socket
+sudo systemctl enable --now nix-daemon.service
