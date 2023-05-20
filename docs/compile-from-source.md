@@ -59,3 +59,9 @@ make installcheck -j $NIX_BUILD_CORES
 ```bash
 nix --version
 ```
+
+### Run the after setup
+
+```bash
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-compile-after-setup.sh | bash -s /usr/local
+```
