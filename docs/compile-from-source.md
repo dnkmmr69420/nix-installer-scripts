@@ -60,6 +60,12 @@ make installcheck -j $NIX_BUILD_CORES
 nix --version
 ```
 
+### Install from the archive (x86_64 only)
+
+```bash
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/tar-extracters/compiled-nix-x86_64-tar-extract.sh | bash
+```
+
 ### Run the after setup
 
 ```bash
