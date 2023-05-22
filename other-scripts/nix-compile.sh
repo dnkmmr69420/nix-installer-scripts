@@ -5,7 +5,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-PREFIX_DIR=$1
 
 mkdir -p /opt/nix-git
 cd /opt/nix-git
@@ -16,4 +15,4 @@ nix develop .#native-clang11StdenvPackages
 
 sleep 1
 
-nix-shell --command "cd /opt/nix-git/nix ; /opt/nix-git/nix/bootstrap.sh ; /opt/nix-git/nix/configure $configureFlags --prefix=$PREFIX_DIR ; make -j $NIX_BUILD_CORES ; make install ; make installcheck -j $NIX_BUILD_CORES"
+nix-shell --command "cd /opt/nix-git/nix ; /opt/nix-git/nix/bootstrap.sh ; sleep 1 ; /opt/nix-git/nix/configure $configureFlags --prefix=/opt/nixusr ; sleep 2 ; make -j $NIX_BUILD_CORES ; sleep 1 ; make install ; make installcheck -j $NIX_BUILD_CORES"
