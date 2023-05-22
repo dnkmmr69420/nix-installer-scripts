@@ -1,8 +1,11 @@
 #!/usr/bin/sudo nix-shell
 
-mkdir -p /opt/nix-git
-cd /opt/nix-git
-git clone https://github.com/NixOS/nix.git
 cd /opt/nix-git/nix
-nix develop
-nix develop .#native-clang11StdenvPackages
+/opt/nix-git/nix/bootstrap.sh
+sleep 1
+/opt/nix-git/nix/configure $configureFlags --prefix=/opt/nixusr
+sleep 2
+make -j $NIX_BUILD_CORES
+sleep 1
+make install
+make installcheck $NIX_BUILD_CORES
