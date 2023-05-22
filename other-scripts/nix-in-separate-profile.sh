@@ -43,6 +43,9 @@ if [ -e '/nix/var/nix/profiles/nix/etc/profile.d/nix-daemon.sh' ]; then
 fi
 EOF
 
+sudo echo "Enabling services..."
+sudo systemctl enable --now nix-daemon.socket
+sudo systemctl enable --now nix-daemon.service
 
 
 sudo nix profile remove 0
