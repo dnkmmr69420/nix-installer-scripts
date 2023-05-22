@@ -42,6 +42,9 @@ if [ -e '/nix/var/nix/profiles/nix/etc/profile.d/nix-daemon.sh' ]; then
   . '/nix/var/nix/profiles/nix/etc/profile.d/nix-daemon.sh'
 fi
 EOF
+sudo tee /etc/sudoers.d/nix-ssl-cert-file <<EOF
+Defaults  env_keep += "NIX_SSL_CERT_FILE"
+EOF
 
 sudo echo "If you don't have selinux installed and you get errors about restorecon not being found, ignore the errors."
 sudo restorecon -RF /nix
