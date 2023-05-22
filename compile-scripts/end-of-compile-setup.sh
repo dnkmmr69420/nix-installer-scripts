@@ -2,7 +2,7 @@
 
 # current ver: 1.79.0
 
-$1=VERSION
+VERSION=$1
 
 sudo echo "Copping libraries..."
 sudo cp /nix/var/nix/profiles/default/lib/libboost_context.so /opt/nixusr/lib
