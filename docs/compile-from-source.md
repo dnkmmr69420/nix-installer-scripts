@@ -6,6 +6,8 @@ This is the modified version of this [page](https://nixos.org/manual/nix/unstabl
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/tar-extracters/compiled-nix-x86_64-tar-extract.sh | bash
 ```
 
+After this, go straight to [After Setup](#After-The-Setup)
+
 don't use the archive, it gives you errors. compile instead.
 
 # Compile
