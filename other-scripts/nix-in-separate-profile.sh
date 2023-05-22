@@ -43,6 +43,9 @@ if [ -e '/nix/var/nix/profiles/nix/etc/profile.d/nix-daemon.sh' ]; then
 fi
 EOF
 
+sudo echo "If you don't have selinux installed and you get errors about restorecon not being found, ignore the errors."
+sudo restorecon -RF /nix
+
 sudo echo "Enabling services..."
 sudo systemctl enable --now nix-daemon.socket
 sudo systemctl enable --now nix-daemon.service
