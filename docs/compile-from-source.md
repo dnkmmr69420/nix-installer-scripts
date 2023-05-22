@@ -74,6 +74,18 @@ make installcheck -j $NIX_BUILD_CORES
 nix --version
 ```
 
+### exit nix-shell
+
+```bash
+exit
+```
+
+### Run this script to copy needed dependencies that the compiler didn't compile
+
+```bash
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/compile-scripts/end-of-compile-setup.sh | bash -s 1.79.0
+```
+
 # After the setup
 
 ### Run the after setup
