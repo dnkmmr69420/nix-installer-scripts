@@ -11,3 +11,5 @@ sudo cp /nix/var/nix/profiles/default/lib/libboost_system.so /opt/nixusr/lib
 sudo cp /nix/var/nix/profiles/default/lib/libboost_system.so.$VERSION /opt/nixusr/lib
 sudo cp /nix/var/nix/profiles/default/lib/libboost_thread.so /opt/nixusr/lib
 sudo cp /nix/var/nix/profiles/default/lib/libboost_thread.so.$VERSION /opt/nixusr/lib
+
+sudo ln -s /etc/nix /opt/nixusr/etc
