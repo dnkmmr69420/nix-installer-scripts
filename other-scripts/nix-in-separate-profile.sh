@@ -39,7 +39,7 @@ sudo cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.socket /etc/syst
 sudo echo "Configuring nix..."
 sudo tee /etc/profile.d/nix.sh <<EOF
 if [ -e '/nix/var/nix/profiles/nix/etc/profile.d/nix-daemon.sh' ]; then
-  . '/opt/nixusr/etc/profile.d/nix-daemon.sh'
+  . '/nix/var/nix/profiles/nix/etc/profile.d/nix-daemon.sh'
 fi
 EOF
 
