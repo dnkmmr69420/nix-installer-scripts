@@ -22,6 +22,7 @@ Everything past this is ran as root in a root bash shell
 ### next make the directory and cd into it
 
 ```bash
+sudo rm -rf /opt/nix-git
 mkdir -p /opt/nix-git
 cd /opt/nix-git
 ```
@@ -47,6 +48,7 @@ nix develop .#native-clang11StdenvPackages
 ### type this
 
 ```bash
+sudo rm -rf /opt/nixusr
 mkdir -p /opt/nixusr
 ```
 
