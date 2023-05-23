@@ -12,7 +12,7 @@ sudo tee /etc/sudoers.d/nix-ssl-cert-file <<EOF
 Defaults  env_keep += "NIX_SSL_CERT_FILE"
 EOF
 
-sudo mkdir /etc/systemd/system/nix-daemon.service.d
+sudo mkdir -p /etc/systemd/system/nix-daemon.service.d
 
 sudo tee /etc/sudoers.d/nix-ssl-cert-file <<EOF
 Defaults  env_keep += "NIX_SSL_CERT_FILE"
