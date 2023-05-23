@@ -18,8 +18,8 @@ mkdir -p /nix/nix
 
 rm -f /etc/systemd/system/nix-daemon.service
 rm -f /etc/systemd/system/nix-daemon.socket
-cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
-cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix-daemon.socket
+cp /nix/nix/nix/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
+cp /nix/nix/nix/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix-daemon.socket
 
 systemctl enable --now nix-daemon.socket
 systemctl enable --now nix-daemon.service
