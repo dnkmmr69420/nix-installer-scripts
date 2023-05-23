@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
 
 if (( $EUID != 0 )); then
-    echo "Please run as root"
+    echo "Must be ran as root"
     exit 1
 fi
+
+echo "Upgrading nix..."
 
 mkdir -p /nix/nix
 /nix/nix/nix/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
+rm -f /etc/systemd/system/nix-daemon.service
+rm -f /etc/systemd/system/nix-daemon.socket
+cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
+cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix-daemon.socket
+
+systemctl enable --now nix-daemon.socket
+systemctl enable --now nix-daemon.service
+
 [[ -f /usr/sbin/restorecon ]] && restorecon -RF /nix
+
+echo "Nix has been upgraded"
