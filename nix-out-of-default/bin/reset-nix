@@ -5,8 +5,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-echo "Restoring nix"
-
 [[ -f /nix/nix/fallback/bin/nix ]] || echo "Nix can't be found" ; exit 2
 
 if [[ ! -f /nix/nix/fallback/bin/nix ]]
@@ -14,6 +12,8 @@ then
     echo "nix can't be found"
     exit 2
 fi
+
+echo "Restoring nix"
 
 /nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
