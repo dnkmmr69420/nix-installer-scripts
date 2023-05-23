@@ -9,7 +9,7 @@ sudo ln -s /nix/nix/nix/bin/nix-build $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-channel $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-collect-garbage $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-copy-closure $PREFIX/bin
-sudo ln -s /nix/nix/nix/nix/bin/nix-daemon $PREFIX/bin
+sudo ln -s /nix/nix/nix/nix/bin/nix-daemon $PREFIX/sbin
 sudo ln -s /nix/nix/nix/bin/nix-hash $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-instantiate $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-prefetch-url $PREFIX/bin
