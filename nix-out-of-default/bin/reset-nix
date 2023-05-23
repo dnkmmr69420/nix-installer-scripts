@@ -11,4 +11,14 @@ echo "Restoring nix"
 
 /nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
+rm -f /etc/systemd/system/nix-daemon.service
+rm -f /etc/systemd/system/nix-daemon.socket
+cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.service
+cp /nix/var/nix/profiles/nix/lib/systemd/system/nix-daemon.socket /etc/systemd/system/nix-daemon.socket
+
+systemctl enable --now nix-daemon.socket
+systemctl enable --now nix-daemon.service
+
+[[ -f /usr/sbin/restorecon ]] && restorecon -RF /nix
+
 echo "Nix has been restored"
