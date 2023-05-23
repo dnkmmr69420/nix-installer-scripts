@@ -5,6 +5,7 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
+mkdir -p /nix/nix
 /nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
 [[ -f /usr/sbin/restorecon ]] && sudo restorecon -RF /nix
