@@ -6,6 +6,6 @@ if (( $EUID != 0 )); then
 fi
 
 mkdir -p /nix/nix
-/nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
+/nix/nix/nix/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
 [[ -f /usr/sbin/restorecon ]] && restorecon -RF /nix
