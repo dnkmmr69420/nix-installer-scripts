@@ -5,7 +5,12 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-[[ -f /nix/nix/nix/bin/nix ]] || echo "Nix can't be found" ; exit 2
+
+if [[ ! -f /nix/nix/nix/bin/nix ]]
+then
+    echo "nix can't be found"
+    exit 2
+fi
 
 echo "Upgrading nix fallback..."
 
