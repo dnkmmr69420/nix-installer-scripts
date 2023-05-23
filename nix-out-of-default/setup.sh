@@ -14,3 +14,6 @@ sleep 1
 
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/configure.sh | sudo bash
 sleep 1
+
+sudo nix profile remove 0
+sudo nix profile remove 0
