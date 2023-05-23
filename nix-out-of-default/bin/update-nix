@@ -7,7 +7,11 @@ fi
 
 echo "Upgrading nix..."
 
-[[ -f /nix/nix/nix/bin/nix ]] || echo "Nix can't be found" ; exit 2
+if [[ ! -f /nix/nix/nix/bin/nix ]]
+then
+    echo "nix can't be found"
+    exit 2
+fi
 
 mkdir -p /nix/nix
 /nix/nix/nix/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
