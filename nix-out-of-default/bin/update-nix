@@ -8,4 +8,4 @@ fi
 mkdir -p /nix/nix
 /nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
-[[ -f /usr/sbin/restorecon ]] && sudo restorecon -RF /nix
+[[ -f /usr/sbin/restorecon ]] && restorecon -RF /nix
