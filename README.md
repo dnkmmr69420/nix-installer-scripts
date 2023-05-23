@@ -60,6 +60,8 @@ curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main
 
 ### [Nix inside distrobox installer and setup](https://github.com/dnkmmr69420/nix-installer-scripts/tree/main/nix-distrobox)
 
+### I recomend doing [this](https://github.com/dnkmmr69420/nix-installer-scripts/tree/main/nix-out-of-default) after to prevent the accidental bricking of nix
+
 ## Uninstallers
 
 ### Regular uninstaller for both non-selinux and selinux muttable systems
