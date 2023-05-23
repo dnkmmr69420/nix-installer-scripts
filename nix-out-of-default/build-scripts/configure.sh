@@ -3,8 +3,8 @@
 sudo echo "Configuring nix..."
 
 sudo tee /etc/profile.d/nix.sh <<EOF
-if [ -e '/opt/nixusr/etc/profile.d/nix-daemon.sh' ]; then
-  . '/opt/nixusr/etc/profile.d/nix-daemon.sh'
+if [ -e '/nix/nix/nix/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/nix/nix/etc/profile.d/nix-daemon.sh'
 fi
 EOF
 
