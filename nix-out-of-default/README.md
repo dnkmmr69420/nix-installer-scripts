@@ -35,8 +35,16 @@ curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup-nolink.sh | bash
 ```
 
+## Extra commands
+
 ### Run these commands if you wanna remove nix from nix-default so only the nix out of default exists
 
 ```bash
 sudo nix profile remove 0 ; sudo nix profile remove 0
+```
+
+### To get man entries
+
+```bash
+sudo ln -s /nix/nix/nix-man/share/man /usr/local/share/man
 ```
