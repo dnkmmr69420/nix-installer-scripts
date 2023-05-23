@@ -7,6 +7,6 @@ fi
 
 mkdir -p /nix/nix
 nix build nixpkgs#nix --out-link /nix/nix/nix
-nix build nixpkgs#nix
+nix build nixpkgs#nix --out-link /nix/nix/fallback
 echo "if you don't have selinux and restorecon can't be found, ignore the error"
 restorecon -RF /nix
