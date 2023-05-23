@@ -2,7 +2,7 @@
 
 PREFIX=$1
 
-sudo echo "Linking services"
+sudo echo "Linking binaries"
 sudo ln -s /nix/nix/nix/bin/nix $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-shell $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-env $PREFIX/bin
@@ -15,6 +15,9 @@ sudo ln -s /nix/nix/nix/bin/nix-hash $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-instantiate $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-prefetch-url $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-store $PREFIX/bin
+sudo ln -s /nix/nix/bin/reset-nix $PREFIX/sbin
+sudo ln -s /nix/nix/bin/update-nix $PREFIX/sbin
+sudo ln -s /nix/nix/bin/update-nix-fallback $PREFIX/sbin
 
 sudo echo "linking share files..."
 sudo mkdir -p $PREFIX/share/bash-completion/completions
