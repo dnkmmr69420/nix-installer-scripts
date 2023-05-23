@@ -1,5 +1,6 @@
 #!/bin/bash
 
+PREFIX=$1
 
 sudo echo "Linking services"
 sudo ln -s /nix/nix/nix/bin/nix $PREFIX/bin
