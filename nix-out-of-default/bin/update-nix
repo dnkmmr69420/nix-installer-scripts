@@ -5,13 +5,13 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-echo "Upgrading nix..."
-
 if [[ ! -f /nix/nix/nix/bin/nix ]]
 then
     echo "nix can't be found"
     exit 2
 fi
+
+echo "Upgrading nix..."
 
 mkdir -p /nix/nix
 /nix/nix/nix/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
