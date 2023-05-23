@@ -1,2 +1,3 @@
 #!/bin/bash
-sudo nix build nixpkgs#nix --out-link /nix/var/nix/profiles/nix
+sudo mkdir -p /opt/nix/nix
+sudo nix build nixpkgs#nix --out-link /opt/nix/nix
