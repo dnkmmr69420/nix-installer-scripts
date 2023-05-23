@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if (( $EUID != 0 )); then
+    echo "Must be ran as root"
+    exit 1
+fi
+
+[[ -f /nix/nix/nix/bin/nix ]] || echo "Nix can't be found" ; exit 2
+
+echo "Upgrading nix fallback..."
+
+/nix/nix/nix/bin/nix build nixpkgs#nix --out-link /nix/nix/fallback
+
+echo "Finnished upgrading nix fallback"
