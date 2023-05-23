@@ -5,8 +5,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-[[ -f /nix/nix/fallback/bin/nix ]] || echo "Nix can't be found" ; exit 2
-
 if [[ ! -f /nix/nix/fallback/bin/nix ]]
 then
     echo "nix can't be found"
