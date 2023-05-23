@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if (( $EUID != 0 )); then
+    echo "Must be ran as root"
+    exit 1
+fi
+
+[[ -f /nix/nix/fallback/bin/nix ]] || echo "Nix can't be found" ; exit 2
+
+echo "Restoring nix"
+
+/nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
+
+echo "Nix has been restored"
