@@ -13,7 +13,7 @@ then
     exit 2
 fi
 
-echo "Restoring nix"
+echo "Restoring nix..."
 
 /nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
 
