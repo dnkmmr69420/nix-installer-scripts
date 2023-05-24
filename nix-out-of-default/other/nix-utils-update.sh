@@ -1,6 +1,10 @@
 #!/bin/bash
-source /nix/nix/etc/nix-prefix.conf
-PREFIX=$NIX_PREFIX_LOCATION
+
+if (( $EUID != 0 )); then
+    echo "Must be ran as root"
+    exit 1
+fi
+
 
 wget -P /nix/nix/bin https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/bin/reset-nix
 wget -P /nix/nix/bin https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/bin/update-nix
