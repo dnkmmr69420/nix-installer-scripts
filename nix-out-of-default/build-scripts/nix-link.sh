@@ -30,4 +30,8 @@ sudo mkdir -p $PREFIX/share/zsh/site-functions
 sudo ln -s /nix/nix/nix/share/zsh/site-functions/_nix $PREFIX/share/zsh/site-functions/_nix
 sudo ln -s /nix/nix/nix/share/zsh/site-functions/run-help-nix $PREFIX/share/zsh/site-functions/run-help-nix
 
-
+sudo echo "Making config file for prefix install location..."
+sudo mkdir -p /nix/nix/etc
+sudo tee /nix/nix/etc/nix-prefix.conf <<EOF
+NIX_PREFIX_LOCATION=$PREFIX
+EOF
