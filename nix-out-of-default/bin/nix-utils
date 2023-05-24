@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [[ "$1" == 'help' ]] ; then
+  echo "update-nix: updates nix"
+  echo "reset-nix: does the same thing as update nix but executes nix from the fallback instead"
+  echo "update-nix-fallback: updates the fallback nix"
+fi
+
 if (( $EUID != 0 )); then
     echo "Must be ran as root"
     exit 1
