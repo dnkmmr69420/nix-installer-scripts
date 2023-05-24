@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+if (( $EUID != 0 )); then
+    echo "Must be ran as root"
+    exit 1
+fi
+
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit 22
+fi
+
+if [[ "$1" == 'update-nix' ]] ; then
+  /nix/nix/bin/update-nix
+fi
+
+if [[ "$1" == 'reset-nix' ]] ; then
+  /nix/nix/bin/reset-nix
+fi
+
+if [[ "$1" == 'update-nix-fallback' ]] ; then
+  /nix/nix/bin/update-nix-fallback
+fi
