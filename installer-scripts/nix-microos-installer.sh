@@ -20,7 +20,7 @@ echo "making SSL Certs"
 
 sleep 3
 
-sudo mkdir /etc/systemd/system/nix-daemon.service.d
+sudo mkdir -p /etc/systemd/system/nix-daemon.service.d
 
 sudo tee /etc/systemd/system/nix-daemon.service.d/override.conf <<EOF
 [Service]
