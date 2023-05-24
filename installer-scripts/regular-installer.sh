@@ -1,4 +1,11 @@
 #!/bin/bash
+
+if ! command -v wget &> /dev/null
+then
+    echo "wget is required for this script to work"
+    exit 2
+fi
+
 sudo echo "Preparing nix installation script"
 sleep 5
 sh <(curl -L https://nixos.org/nix/install) --daemon --yes
