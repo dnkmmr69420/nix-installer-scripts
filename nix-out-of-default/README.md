@@ -18,18 +18,24 @@ The fallback nix is there in case if something happens to the regular nix. It sh
 
 ## Scripts
 
-### Main script
+### Everything script
+
+This performs the normal stuff and linking
 
 ```bash
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup.sh | bash -s /usr/local
 ```
 ### Link
 
+This only does linking
+
 ```bash
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/nix-link.sh | bash -s /usr/local
 ```
 
 ### Script with no link
+
+This one does the normal stuff without linking
 
 ```bash
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup-nolink.sh | bash
