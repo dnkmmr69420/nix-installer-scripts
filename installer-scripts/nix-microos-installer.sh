@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ ! -d "/nix" ] 
+then
+    echo "/nix cannot be created. Run \"sudo transactional-update run mksubvolume /nix\" to create /nix."
+    exit 30
+fi
+
 sudo sleep 1
 
 echo "Adding selinux content to /nix"
