@@ -41,6 +41,12 @@ This one does the normal stuff without linking
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup-nolink.sh | bash
 ```
 
+### Reinstall nix utils
+
+```bash
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/nix-utils-install.sh | bash
+```
+
 ## Extra commands
 
 ### Run these commands if you wanna remove nix from nix-default so only the nix out of default exists
