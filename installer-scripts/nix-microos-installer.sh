@@ -49,9 +49,11 @@ sudo setenforce Enforcing
 
 sleep 1
 
-echo "Making a nix backup"
+echo "Copying SSL Cert files"
 
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
+sleep 1
+
+sudo cp /nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-bundle.crt
 
 sleep 1
 
@@ -64,4 +66,24 @@ sleep 1
 sudo rm -f /etc/nix/nix.conf ; sudo wget -P /etc/nix https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix.conf
 sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix-app-icons.sh
 
-sudo cp /nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-bundle.crt
+echo "Building nix package manager..."
+
+sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup-nolink.sh | bash
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/nix-link.sh | sudo transactional-update run bash -s /usr
+
+echo "Cleaning up..."
+
+sudo nix profile remove 0
+sudo nix profile remove 0
+
+sleep 1
+
+echo "Making a nix backup"
+
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
+
+sleep 1
+
+echo "Installation has finnished, you must reboot"
