@@ -46,11 +46,9 @@ echo "Now setting SELinux back to Enforcing"
 
 sudo setenforce Enforcing
 
-sleep 1
 
-echo "Making a nix backup"
 
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
+
 
 sleep 1
 
@@ -76,6 +74,12 @@ sleep 1
 
 sudo nix profile remove 0
 sudo nix profile remove 0
+
+sleep 1
+
+echo "Making a nix backup"
+
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
 
 echo "Reboot your system by typing"
 echo "systemctl reboot"
