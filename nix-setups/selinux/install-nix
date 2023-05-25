@@ -5,6 +5,12 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
+if ! command -v curl &> /dev/null
+then
+    echo "curl is required for this script to work"
+    exit 2
+fi
+
 if [[ -f /etc/nix-setup/install-config.conf ]]
 then
   source /etc/nix-setup/install-config.conf
