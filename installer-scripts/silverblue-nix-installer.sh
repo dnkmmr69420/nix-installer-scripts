@@ -65,15 +65,15 @@ sudo setenforce Permissive
 
 sleep 1
 
-echo "Preparing the nix install script"
+echo "Preparing the nix install script..."
 
 sleep 5
 
 sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 
-echo "Nix installer has Finished running"
+echo "Nix installer has Finished running..."
 sleep 1
-echo "Now copying service files"
+echo "Now copying service files..."
 
 sleep 1
 
@@ -87,7 +87,7 @@ sudo setenforce Enforcing
 
 sleep 1
 
-echo "Making a nix backup"
+echo "Making a nix backup..."
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
 
@@ -95,14 +95,25 @@ sleep 1
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-sudo-path.sh)
 
-echo "Modifying configurations"
+echo "Modifying configurations..."
 
 sleep 1
 
 sudo rm -f /etc/nix/nix.conf ; sudo wget -P /etc/nix https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix.conf
 sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix-app-icons.sh
 
+sudo echo "Building nix package manager..."
+
 sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup.sh | bash -s /usr/local
+
+sudo echo "Cleaning up..."
+
+sleep 1
+
+sudo nix profile remove 0
+sudo nix profile remove 0
 
 echo "Reboot your system by typing"
 echo "systemctl reboot"
