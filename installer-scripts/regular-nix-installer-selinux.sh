@@ -63,7 +63,19 @@ sleep 1
 sudo rm -f /etc/nix/nix.conf ; sudo wget -P /etc/nix https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix.conf
 sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix-app-icons.sh
 
+
+sudo echo "Building nix package manager..."
+
 sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup.sh | bash -s /usr
+
+sudo echo "Cleaning up..."
+
+sleep 1
+
+sudo nix profile remove 0
+sudo nix profile remove 0
 
 echo "Reboot your system by typing"
 echo "systemctl reboot"
