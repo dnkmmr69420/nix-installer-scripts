@@ -2,6 +2,10 @@
 
 PREFIX=$1
 
+sudo mkdir -p $PREFIX/bin
+sudo mkdir -p $PREFIX/sbin
+sudo mkdir -p $PREFIX/share
+
 sudo echo "Linking binaries"
 sudo ln -s /nix/nix/nix/bin/nix $PREFIX/bin
 sudo ln -s /nix/nix/nix/bin/nix-shell $PREFIX/bin
