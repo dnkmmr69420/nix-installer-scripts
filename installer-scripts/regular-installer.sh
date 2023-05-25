@@ -10,6 +10,11 @@ sudo echo "Preparing nix installation script"
 sleep 5
 sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 
+if [ ! -f "/etc/ssl/certs/ca-bundle.crt" ] 
+then
+    sudo cp /nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-bundle.crt
+fi
+
 
 sleep 1
 
