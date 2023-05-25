@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if (( $EUID != 0 )); then
+    echo "Must be ran as root"
+    exit 1
+fi
+
+if [[ -f /etc/nix-setup/install-config.conf ]]
+then
+  source /etc/nix-setup/install-config.conf
+else
+  curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/regular-nix-installer-selinux.sh | bash
+fi
