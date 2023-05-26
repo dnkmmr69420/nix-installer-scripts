@@ -86,4 +86,4 @@ bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scrip
 
 sleep 1
 
-echo "Installation has finnished, you must reboot"
+echo "Installation has finnished, you must reboot for this installation to work."
