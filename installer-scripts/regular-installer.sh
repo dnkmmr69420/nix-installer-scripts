@@ -10,11 +10,6 @@ sudo echo "Preparing nix installation script"
 sleep 5
 sh <(curl -L https://nixos.org/nix/install) --daemon --yes
 
-if [ ! -f "/etc/ssl/certs/ca-bundle.crt" ] 
-then
-    sudo cp /nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-bundle.crt
-fi
-
 
 sleep 1
 
@@ -31,6 +26,11 @@ echo "Building nix..."
 sleep 1
 
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup.sh | bash -s /usr
+
+if [ ! -f "/etc/ssl/certs/ca-bundle.crt" ] 
+then
+    sudo ln -s /nix/nix/cacert/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-bundle.crt
+fi
 
 sudo echo "Cleaning up..."
 
