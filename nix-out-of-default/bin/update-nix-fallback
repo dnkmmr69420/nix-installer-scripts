@@ -15,5 +15,6 @@ fi
 echo "Upgrading nix fallback..."
 
 /nix/nix/nix/bin/nix build nixpkgs#nix --out-link /nix/nix/fallback
+/nix/nix/nix/bin/nix build nixpkgs#cacert --out-link /nix/nix/cacert-fallback
 
 echo "Finnished upgrading nix fallback"
