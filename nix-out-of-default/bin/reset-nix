@@ -14,6 +14,7 @@ fi
 echo "Restoring nix..."
 
 /nix/nix/fallback/bin/nix build nixpkgs#nix --out-link /nix/nix/nix
+/nix/nix/fallback/bin/nix build nixpkgs#cacert --out-link /nix/nix/cacert
 
 rm -f /etc/systemd/system/nix-daemon.service
 rm -f /etc/systemd/system/nix-daemon.socket
