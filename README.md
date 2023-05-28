@@ -85,6 +85,8 @@ curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main
 
 [Compile from source](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/compile-from-source.md)
 
+[Common Issues](https://github.com/dnkmmr69420/nix-installer-scripts/blob/main/docs/common-issues.md)
+
 ## Some useful nix tools
 
 Fleek: [Github-page](https://github.com/ublue-os/fleek) [Website](https://getfleek.dev/)
