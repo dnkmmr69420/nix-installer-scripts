@@ -41,6 +41,12 @@ sudo nix profile remove 0
 
 sleep 1
 
+echo "Linking..."
+
+sleep 1
+
+sudo ln -s /nix/var/nix/profiles/default /nix/nix-profile
+sudo ln -s /nix/var/nix/profiles/default /var/nix-profile
 
 echo "Creating a backup of nix"
 sleep 1
