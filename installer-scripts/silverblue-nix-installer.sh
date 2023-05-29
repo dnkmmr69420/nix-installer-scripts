@@ -113,6 +113,13 @@ sleep 1
 sudo nix profile remove 0
 sudo nix profile remove 0
 
+echo "Linking..."
+
+sleep 1
+
+sudo ln -s /nix/var/nix/profiles/default /nix/nix-profile
+sudo ln -s /nix/var/nix/profiles/default /var/nix-profile
+
 sleep 1
 
 echo "Making a nix backup..."
