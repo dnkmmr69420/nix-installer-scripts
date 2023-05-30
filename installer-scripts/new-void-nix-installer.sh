@@ -28,13 +28,45 @@ sudo tee /etc/profile.d/nix-daemon.sh <<EOF
 export NIX_REMOTE=daemon
 EOF
 
+echo "adding sudo paths..."
+
+sleep 5
+
+bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-sudo-path.sh)
+
 sudo rm -f /etc/profile.d/nix.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/nix/files/nix.sh
 
 sudo echo "Building nix package manager..."
 
 sleep 1
 
-curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup.sh | bash -s /usr
+sudo echo "Configuring nix..."
+
+sudo tee /etc/profile.d/nix.sh <<EOF
+if [ -e '/nix/nix/nix/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/nix/nix/etc/profile.d/nix-daemon.sh'
+fi
+EOF
+sleep 1
+
+sudo tee /etc/sudoers.d/nix-ssl-cert-file <<EOF
+Defaults  env_keep += "NIX_SSL_CERT_FILE"
+EOF
+sleep 1
+
+sudo ln -s /nix/nix/cacert/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-bundle.crt
+sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/nix-build.sh | sudo bash
+sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/nix-link.sh | bash -s /usr
+sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/build-scripts/nix-utils-install.sh | sudo bash
+sleep 1
+
+
 
 sudo echo "Cleaning up..."
 
@@ -50,13 +82,11 @@ sleep 1
 sudo ln -s /nix/var/nix/profiles/default /nix/nix-profile
 sudo ln -s /nix/var/nix/profiles/default /var/nix-profile
 
-"Setting up configs..."
+"Creating a backup..."
+
+sleep 1
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup.sh)
-
-sleep 5
-
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-sudo-path.sh)
 
 echo "Modifying configurations"
 
