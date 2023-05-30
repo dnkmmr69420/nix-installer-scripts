@@ -89,10 +89,4 @@ sleep 1
 
 bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup.sh)
 
-echo "Modifying configurations"
-
-sleep 1
-
-
-
-sleep 1
+echo "Nix has finnished installing. Reboot your system for nix to work properly"
