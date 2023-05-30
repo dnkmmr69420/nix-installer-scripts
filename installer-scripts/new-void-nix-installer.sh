@@ -19,7 +19,7 @@ sudo mkdir -p /etc/sv/nix-daemon
 sudo tee /etc/sv/nix-daemon <<EOF
 #!/bin/sh
 exec 2>&1
-exec nix-daemon
+exec /nix/nix/nix/bin/nix-daemon
 EOF
 
 sudo ln -s /etc/sv/nix-daemon /var/service/
@@ -29,6 +29,26 @@ export NIX_REMOTE=daemon
 EOF
 
 sudo rm -f /etc/profile.d/nix.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/nix/files/nix.sh
+
+sudo echo "Building nix package manager..."
+
+sleep 1
+
+curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-out-of-default/setup.sh | bash -s /usr
+
+sudo echo "Cleaning up..."
+
+sleep 1
+
+sudo nix profile remove 0
+sudo nix profile remove 0
+
+echo "Linking..."
+
+sleep 1
+
+sudo ln -s /nix/var/nix/profiles/default /nix/nix-profile
+sudo ln -s /nix/var/nix/profiles/default /var/nix-profile
 
 "Setting up configs..."
 
