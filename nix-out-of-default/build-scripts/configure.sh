@@ -8,6 +8,18 @@ if [ -e '/nix/nix/nix/etc/profile.d/nix-daemon.sh' ]; then
 fi
 EOF
 
+sudo mkdir -p /nix/nix/etc
+sudo tee /nix/nix/etc/profile.sh <<EOF
+# Nix
+if [ -e '/nix/nix/nix/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/nix/nix/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+EOF
+
+sudo cat /nix/nix/etc/profile.sh >> /etc/bashrc
+sudo cat /nix/nix/etc/profile.sh >> /etc/zshrc
+
 sudo tee /etc/sudoers.d/nix-ssl-cert-file <<EOF
 Defaults  env_keep += "NIX_SSL_CERT_FILE"
 EOF
