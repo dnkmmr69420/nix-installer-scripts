@@ -3,8 +3,8 @@ sudo echo "Uninstalling nix..."
 sudo systemctl stop nix-daemon.service
 sudo systemctl disable nix-daemon.socket nix-daemon.service
 sudo systemctl daemon-reload
-sudo rm /etc/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.socket
-sudo rm /etc/tmpfiles.d/nix-daemon.conf
+sudo rm -f /etc/systemd/system/nix-daemon.service /etc/systemd/system/nix-daemon.socket
+sudo rm -f /etc/tmpfiles.d/nix-daemon.conf
 sudo rm -rf /nix /etc/nix /etc/profile.d/nix.sh ~root/.nix-profile ~root/.nix-defexpr ~root/.nix-channels ~/.nix-profile ~/.nix-defexpr ~/.nix-channels
 sudo rm -rf /etc/systemd/system/nix-daemon.service.d/override.conf
 
@@ -32,3 +32,8 @@ sudo rm -f /usr/bin/nix-store
 sudo rm -f /usr/sbin/reset-nix
 sudo rm -f /usr/sbin/update-nix
 sudo rm -f /usr/sbin/update-nix-fallback
+sudo rm -f /usr/share/bash-completion/completions/nix
+sudo rm -f /usr/share/doc/nix
+sudo rm -f /usr/share/fish/vendor_completions.d/nix.fish
+sudo rm -f /usr/share/zsh/site-functions/_nix
+sudo rm -f /usr/share/zsh/site-functions/run-help-nix
