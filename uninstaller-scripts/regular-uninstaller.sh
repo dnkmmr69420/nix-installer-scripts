@@ -13,5 +13,22 @@ for i in $(seq 1 32); do
 done
 
 sudo groupdel nixbld
+
 sudo mv /etc/bashrc.backup-before-nix /etc/bashrc
 sudo mv /etc/zshrc.backup-before-nix /etc/zshrc
+
+sudo rm -f /usr/bin/nix $PREFIX/bin
+sudo rm -f /usr/bin/nix-shell
+sudo rm -f /usr/bin/nix-env
+sudo rm -f /usr/bin/nix-build
+sudo rm -f /usr/bin/nix-channel
+sudo rm -f /usr/bin/nix-collect-garbage
+sudo rm -f /usr/bin/nix-copy-closure
+sudo rm -f /usr/sbin/nix-daemon
+sudo rm -f /usr/bin/nix-hash
+sudo rm -f /usr/bin/nix-instantiate
+sudo rm -f /usr/bin/nix-prefetch-url
+sudo rm -f /usr/bin/nix-store
+sudo rm -f /usr/sbin/reset-nix
+sudo rm -f /usr/sbin/update-nix
+sudo rm -f /usr/sbin/update-nix-fallback
