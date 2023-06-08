@@ -17,7 +17,7 @@ sudo groupdel nixbld
 sudo mv /etc/bashrc.backup-before-nix /etc/bashrc
 sudo mv /etc/zshrc.backup-before-nix /etc/zshrc
 
-sudo rm -f /usr/bin/nix $PREFIX/bin
+sudo rm -f /usr/bin/nix
 sudo rm -f /usr/bin/nix-shell
 sudo rm -f /usr/bin/nix-env
 sudo rm -f /usr/bin/nix-build
