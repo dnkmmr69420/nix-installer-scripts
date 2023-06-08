@@ -3,7 +3,7 @@ sudo echo "Uninstalling nix..."
 
 if [[ ! -d /etc/nix ]] ; then
   echo "Nix doesn't look like it has been installed so it has nothing to uninstall"
-if
+fi
 
 sudo systemctl stop nix-daemon.service
 sudo systemctl disable nix-daemon.socket nix-daemon.service
