@@ -11,5 +11,7 @@ RUN   apk update && \
 
 RUN   ln -sf /bin/sh /usr/bin/sh && \
       ln -sf /bin/bash /usr/bin/bash
-      
+
+RUN   mkdir -m 0755 /nix && chown root /nix
+
 RUN   sh <(curl -L https://nixos.org/nix/install) --no-daemon
