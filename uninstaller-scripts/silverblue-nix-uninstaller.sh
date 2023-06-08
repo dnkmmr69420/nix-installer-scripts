@@ -13,8 +13,26 @@ for i in $(seq 1 32); do
 done
 
 sudo groupdel nixbld
+
 sudo mv /etc/bashrc.backup-before-nix /etc/bashrc
-sudo mv /etc/zshrc.backup-before-nix /etc/zshrc
+
+
+if [[ ! -f /etc/zshrc.backup-before-nix ]] ; then
+  sudo rm -f /etc/zshrc
+fi
+
+if [[ -f /etc/zshrc.backup-before-nix ]] ; then
+  sudo mv /etc/zshrc.backup-before-nix /etc/zshrc
+fi
+
+if [[ -f /etc/bash.bashrc.backup-before-nix ]] ; then
+  sudo mv /etc/bash.bashrc.backup-before-nix /etc/bash.bashrc
+fi
+
+if [[ ! -f /etc/bash.bashrc.backup-before-nix ]] ; then
+  sudo rm -f /etc/bash.bashrc
+fi
+
 
 sudo rm -f /usr/local/bin/nix
 sudo rm -f /usr/local/bin/nix-shell
