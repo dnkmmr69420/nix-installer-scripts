@@ -12,7 +12,4 @@ RUN   apk update && \
 RUN   ln -sf /bin/sh /usr/bin/sh && \
       ln -sf /bin/bash /usr/bin/bash
       
-RUN   wget -P /opt https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/nix-distrobox/nix-check && \
-      chmod a+x /opt/nix-check
-      
-ENTRYPOINT  /opt/nix-check
+RUN   sh <(curl -L https://nixos.org/nix/install) --no-daemon
