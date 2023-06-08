@@ -1,5 +1,9 @@
 #!/bin/bash
 sudo echo "Uninstalling nix..."
+
+if [[ ! -d /etc/nix ]] ; then
+  echo "Nix doesn't look like it has been installed so it has nothing to uninstall"
+
 sudo systemctl stop nix-daemon.service
 sudo systemctl disable nix-daemon.socket nix-daemon.service
 sudo systemctl daemon-reload
@@ -15,7 +19,23 @@ done
 sudo groupdel nixbld
 
 sudo mv /etc/bashrc.backup-before-nix /etc/bashrc
-sudo mv /etc/zshrc.backup-before-nix /etc/zshrc
+sudo rm -f /etc/profile.d/nix.sh
+
+if [[ ! -f /etc/zshrc.backup-before-nix ]] ; then
+  sudo rm -f /etc/zshrc
+fi
+
+if [[ -f /etc/zshrc.backup-before-nix ]] ; then
+  sudo mv /etc/zshrc.backup-before-nix /etc/zshrc
+fi
+
+if [[ -f /etc/bash.bashrc.backup-before-nix ]] ; then
+  sudo mv /etc/bash.bashrc.backup-before-nix /etc/bash.bashrc
+fi
+
+if [[ ! -f /etc/bash.bashrc.backup-before-nix ]] ; then
+  sudo rm -f /etc/bash.bashrc
+fi
 
 sudo rm -f /usr/bin/nix
 sudo rm -f /usr/bin/nix-shell
