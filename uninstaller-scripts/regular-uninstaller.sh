@@ -19,7 +19,6 @@ done
 sudo groupdel nixbld
 
 sudo mv /etc/bashrc.backup-before-nix /etc/bashrc
-sudo rm -f /etc/profile.d/nix.sh
 
 if [[ ! -f /etc/zshrc.backup-before-nix ]] ; then
   sudo rm -f /etc/zshrc
