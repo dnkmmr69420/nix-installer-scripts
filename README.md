@@ -93,6 +93,8 @@ Fleek: [Github-page](https://github.com/ublue-os/fleek) [Website](https://getfle
 
 Nix Portable: [Main-Page](https://github.com/DavHau/nix-portable) [My-nix-portable-utilities](https://github.com/dnkmmr69420/nix-portable-utils)
 
+Devbox: [Website](https://www.jetpack.io/devbox) [Github](https://github.com/jetpack-io/devbox)
+
 ## Shorten link
 
 https://tinyurl.com/nxscrpts
