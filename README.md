@@ -3,6 +3,8 @@ Various scripts to install the nix package manager
 
 This may break if something other than bash is not the default login shell so have bash be the default shell. It will be better to make a profile on your terminal application and have a different shell instance that way. If the commands itself give some sort of error, use bash as a shell. Type `bash` into the terminal to get to bash.
 
+[Read This](https://github.com/dnkmmr69420/nix-installer-scripts/tree/main/nix-out-of-default)
+
 ## Installers
 
 ### Regular installer for non-selinux systems
