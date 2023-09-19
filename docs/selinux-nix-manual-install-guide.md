@@ -170,7 +170,7 @@ After you have configured SELinux (and if you are on Silverblue, configured a `/
 
 ### Step 8
 
-Temorarly set selinux to "permissive"
+Temporarily set selinux to "permissive"
 
 ```bash
 sudo setenforce Permissive
