@@ -59,7 +59,7 @@ sudo systemctl daemon-reload ; sudo systemctl enable nix.mount ; sudo systemctl 
 
 sleep 1
 
-echo "Temorarly setting SELinux to permissive"
+echo "Temporarily setting SELinux to permissive"
 
 sudo setenforce Permissive
 
