@@ -1,3 +1,5 @@
+# This repo is now archived. Use [Determinate Systems Nix Installer](https://github.com/DeterminateSystems/nix-installer) instead.
+
 # nix-installer-scripts
 Various scripts to install the nix package manager
 
